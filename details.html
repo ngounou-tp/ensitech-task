@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details des Etudiants</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+    <body style=" margin-top:20px;background:#f8f8f8">
+        <div class="container rounded bg-white mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-3 border-right">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+                </div>
+                <div class="col-md-5 border-right">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">Information de l'etudiants</h4>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label >Matricule</label>
+                                <input type="text" class="form-control" placeholder="M0001" value="">
+                            </div>
+                            <div class="col-md-12">
+                                <label >Nom</label>
+                                <input type="text" class="form-control" placeholder="Doe" value="">
+                            </div>
+                            <div class="col-md-12">
+                                <label >Prenom</label>
+                                <input type="text" class="form-control" placeholder="John" value="">
+                            </div>
+                            <div class="col-md-12">
+                                <label >Date de naissance</label>
+                                <input type="text" class="form-control" placeholder="23-03-1999" value="">
+                            </div>
+                            <div class="col-md-12">
+                                <label >Adresse de Residence</label>
+                                <input type="text" class="form-control" placeholder="Douala, Cameroun" value="">
+                            </div>
+                            <div class="col-md-12">
+                                <label >Numero de telephone</label>
+                                <input type="text" class="form-control" placeholder="+23456789" value="">
+                            </div>
+                            <div class="col-md-12">
+                                <label >Email</label>
+                                <input type="text" class="form-control" placeholder="johndoe@gmail.com" value="">
+                            </div>
+                            <div class="col-md-12">
+                                <label >Diplome d'admission</label>
+                                <input type="text" class="form-control" placeholder="Bac D" value="">
+                            </div>
+                            <div class="col-md-12">
+                                <label >Formation souhaitee</label>
+                                    <input type="text" class="form-control" placeholder="Formation 1" value="">
+                            </div>
+                        </div>         
+                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Mettre a jour</button></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center experience"><span>Cours suivie</span><button class="border px-3 p-1 add-experience" type="button" data-toggle="modal" data-target="#add-cours-form-modal"><i class="fa fa-plus"></i>&nbsp;Ajouter</button></div><br>
+                        <div class="col-md-12 mt-2"><label>Algorithmique</label><input type="text" class="form-control" placeholder="Dr Anabelle" value=""></div>
+                        <div class="col-md-12 mt-2"><label>Programmation C</label><input type="text" class="form-control" placeholder="Prof Tanko" value=""></div>
+                        <div class="col-md-12 mt-2"><label>Analyse mathematique</label><input type="text" class="form-control" placeholder="Mr Elolo" value=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="add-cours-form-modal">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Attribution de Cours</h5>
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container mt-5">
+                        <h3 class="text-center"></h3>
+                        <form id="courseForm">
+                            <div id="courseList">
+                                <div class="form-group position-relative">
+                                    <select class="form-control" id="course-1" name="courses[]">
+                                        <option value="">Sélectionnez un cours</option>
+                                        <option value="course1">Course 1</option>
+                                        <option value="course2">Course 2</option>
+                                        <option value="course3">Course 3</option>
+                                        <option value="course4">Course 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                      <div class="row">
+                        <div class="col d-flex justify-content-between">
+                          <button class="btn btn-warning mr-4" type="button" data-dismiss="modal" class="close">Annuler</button>
+                          <div>
+                            <button type="button" id="addCourseBtn" class="btn btn-secondary">Ajouter un autre cours</button>
+                            <button type="submit" class="btn btn-primary">Enregistrer</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+      
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    let courseCount = 1;
+            
+                    document.getElementById('addCourseBtn').addEventListener('click', function() {
+                        courseCount++;
+                        const courseList = document.getElementById('courseList');
+            
+                        // Create a new div for the new course input
+                        const newCourseDiv = document.createElement('div');
+                        newCourseDiv.classList.add('form-group', 'position-relative');
+                        newCourseDiv.innerHTML = `
+                            <label for="course-${courseCount}">Cours</label>
+                            <select class="form-control" id="course-${courseCount}" name="courses[]">
+                                <option value="">Sélectionnez un cours</option>
+                                <option value="course1">Course 1</option>
+                                <option value="course2">Course 2</option>
+                                <option value="course3">Course 3</option>
+                                <option value="course4">Course 4</option>
+                            </select>
+                            <span class="text-danger remove-btn">&times;</span>
+                        `;
+            
+                        // Append the new course input to the course list
+                        courseList.appendChild(newCourseDiv);
+            
+                        // Add event listener to remove the course
+                        newCourseDiv.querySelector('.remove-btn').addEventListener('click', function() {
+                            courseList.removeChild(newCourseDiv);
+                        });
+                    });
+            
+                    // Handle form submission
+                    document.getElementById('courseForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        const formData = new FormData(this);
+                        const courses = formData.getAll('courses[]');
+            
+                        if (courses.length === 0 || courses.some(course => course === '')) {
+                            alert('Veuillez sélectionner au moins un cours.');
+                            return;
+                        }
+            
+                        // Process the form data (e.g., send it to the server)
+                        alert('Cours attribués: ' + courses.join(', '));
+                    });
+                });
+            </script>
+    </body>
+</html>
+
